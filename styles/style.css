@@ -87,7 +87,14 @@ content {
 p {
     margin: var(--gutter);
 }
-  
+
+form {
+    display: block;
+    align-self:center;
+}
+label {
+    display: block;
+}
 footer {
     position: fixed;
     width: 100%;
