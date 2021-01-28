@@ -9,7 +9,7 @@ function easy() {
 }
 const easyresult = easy();
 
-function easyscore(results) {
+export function easyscore(results) {
     if (results === 1){
         return 100;
     }
@@ -28,7 +28,7 @@ function medium() {
 }
 const mediumresult = medium();
 
-function mediumscore(results) {
+export function mediumscore(results) {
     if (results === 1){
         return 300;
     }
@@ -48,7 +48,7 @@ function hard() {
 }
 const hardresult = hard();
 
-function hardscore(results) {
+export function hardscore(results) {
     if (results === 1){
         return 500;
     }
@@ -61,8 +61,8 @@ const rail = {
     id: 'rail',
     title: 'Radical Rail',
     map: {
-        //top: '%',
-        //left: '%'
+        top: '80%',
+        left: '70%'
     },
     image: './assets/rail.PNG',
     description: 'You have come up on the Radical Rail! Which trick would you like to try?',
@@ -90,8 +90,8 @@ const ramp = {
     id: 'ramp',
     title: 'Vert Ramp',
     map: {
-        //top: '%',
-        //left: '%'
+        top: '17%',
+        left: '37%'
     },
     image: './assets/ramp.PNG',
     description: 'Now it is time for the Vert Ramp! Which trick do you want to try?',
@@ -117,10 +117,10 @@ const ramp = {
 
 const flat = {
     id: 'flat',
-    title: 'Vert Ramp',
+    title: 'Flat Ground',
     map: {
-        //top: '%',
-        //left: '%'
+        top: '31%',
+        left: '5%'
     },
     image: './assets/flat.PNG',
     description: 'Prove yourself on Flat Ground! Which trick do you want to try?',
