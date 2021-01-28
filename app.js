@@ -8,9 +8,7 @@ form.addEventListener('submit', (e) => {
     const user = {
         name: formData.get('name'),
         skater: formData.get('skater'),
-        // find out how to get img from form, check dani adventure quest 1
-        skaterImg: formData.get('image'),
-        tricksLanded: 0,
+        result: 0,
         score: 0,
         completed: {},
     };

@@ -9,7 +9,6 @@ const form = document.querySelector('form');
 const params = new URLSearchParams(window.location.search);
 // get the value of the id key in the URL quesry string
 const skateId = params.get('id');
-console.log(skateId);
 const skate = findById(skateData, skateId);
 
 h1.textContent = skate.title;
@@ -39,5 +38,20 @@ form.appendChild(button);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const formData = new FormData(form);
+    
+    const selectionId = formData.get('choices');
+    
+    const choice = findById(skate.choices, selectionId);
+    const user = JSON.parse(localStorage.getItem('USER'));
+
+    user.result += choice.result;
+    user.score += choice.score;
+    // use the selectionId to set the property dynamically
+    user.completed[skateId] = true;
+
+    //     - Put the new stats in local storage
+    localStorage.setItem('USER', JSON.stringify(user));
     window.location = '../map/index.html';
 });
